@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html ng-app>
+<head>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<title>Phonebook</title>
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+		<h1>Phonebook</h1>
+		<div class="col-xs-3">
+		<input type="text" placeholder="Search contact" class="form-control" ng-model="searchNumber">
+		</div>
+		<table class="table">
+			<thead>
+				<tr>
+					<th><a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">Name</a></th>
+					<th><a href="#" ng-click="sortType = 'Ext'; sortReverse = !sortReverse">Ext</a></th>
+					<th><a href="#" ng-click="sortType = 'Mob'; sortReverse = !sortReverse">Mob</a></th>
+					<th><a href="#" ng-click="sortType = 'location'; sortReverse = !sortReverse">Location</a></th>
+					<th><a href="#" ng-click="sortType = 'department'; sortReverse = !sortReverse">Department</a></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="contact in contactlist | orderBy:sortType:sortReverse | filter: searchNumber">
+					<td>{{contact.name}}</td>
+					<td>{{contact.Ext}}</td>
+					<td>{{contact.Mob}}</td>
+					<td>{{contact.location}}</td>
+					<td>{{contact.department}}</td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	</div>	
+	<script src="angular.min.js"></script>
+	<script src="controllers/controller.js"></script>
+</body>
+</html>

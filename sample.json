@@ -1,0 +1,10 @@
+[{'Ext' : '1234', 'Mob' : '+7 777 777 77 77', 'name' : 'User1', 'location' : 'West', 'department' : 'Security'},
+{'Ext' : '1243', 'Mob' : '+7 777 777 77 77', 'name' : 'User2', 'location' : 'East', 'department' : 'IT'},
+{'Ext' : '2134', 'Mob' : '+7 777 777 77 77', 'name' : 'User3', 'location' : 'South', 'department' : 'Finance'},
+{'Ext' : '2143', 'Mob' : '+7 777 777 77 77', 'name' : 'User4', 'location' : 'North', 'department' : 'Human Resources'},
+{'Ext' : '4321', 'Mob' : '+7 777 777 77 77', 'name' : 'User5', 'location' : 'West', 'department' : 'Free'},
+{'Ext' : '3241', 'Mob' : '+7 777 777 77 77', 'name' : 'User6', 'location' : 'East', 'department' : 'Product Development'},
+{'Ext' : '5678', 'Mob' : '+7 777 777 77 77', 'name' : 'User7', 'location' : 'South', 'department' : 'Engineering'},
+{'Ext' : '7865', 'Mob' : '+7 777 777 77 77', 'name' : 'User8', 'location' : 'North', 'department' : 'Logistics'},
+{'Ext' : '7856', 'Mob' : '+7 777 777 77 77', 'name' : 'User9', 'location': 'East', 'department' : 'Production'},
+{'Ext' : '4567', 'Mob' : '+7 777 777 77 77', 'name' : 'User10','location' : 'West', 'department' : 'Engineering'}]

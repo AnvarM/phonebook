@@ -1,0 +1,5 @@
+Import data from .json file:
+1. mongo
+2. use phonebook
+3. db.dropDatabase() 
+4. mongoimport --db phonebook --collection phonebook < sample.json /jsonArray

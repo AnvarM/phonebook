@@ -1,0 +1,63 @@
+<!DOCTYPE>
+<html ng-app>
+<head>
+	<link rel="stylesheet" href="bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<title>Phonebook Admin Panel</title>
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+	
+		<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+		<h1>Phonebook Admin Panel</h1>
+		<table class = "table">
+		<tbody>
+		<tr>
+					<td><input class="form-control" ng-model = "contact.name"></td>
+					<td><input class="form-control" ng-model = "contact.Ext"></td>
+					<td><input class="form-control" ng-model = "contact.Mob"></td>
+					<td><input class="form-control" ng-model = "contact.location"></td>
+					<td><input class="form-control" ng-model = "contact.department"></td>
+					<td><button class="btn btn-primary" ng-click="addContact()">Add</button></td>
+					<td><button class="btn btn-info" ng-click="update()">Update</button></td>
+					<td><button class = "btn btn-info" ng-click="deselect()">Clear</button></td>
+					<td><input type="text" placeholder="Search" class="form-control" ng-model="searchNumber"></td>
+				</tr>
+		</tbody>
+		</table>
+		</div>
+		</nav>
+		<div class = "main">
+		<table class="table">
+			<thead>
+				<tr>
+					<th><a href="#" ng-click="sortType = 'name'; sortReverse = !sortReverse">Name</a></th>
+					<th><a href="#" ng-click="sortType = 'Ext'; sortReverse = !sortReverse">Ext</a></th>
+					<th><a href="#" ng-click="sortType = 'Mob'; sortReverse = !sortReverse">Mob</a></th>
+					<th><a href="#" ng-click="sortType = 'location'; sortReverse = !sortReverse">Location</a></th>
+					<th><a href="#" ng-click="sortType = 'department'; sortReverse = !sortReverse">Department</a></th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+					<th>&nbsp;</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="contact in contactlist | orderBy:sortType:sortReverse | filter: searchNumber">
+					<td>{{contact.name}}</td>
+					<td>{{contact.Ext}}</td>
+					<td>{{contact.Mob}}</td>
+					<td>{{contact.location}}</td>
+					<td>{{contact.department}}</td>
+					<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+					<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+
+	</div>	
+	<script src="angular.min.js"></script>
+	<script src="controllers/controller.js"></script>
+</body>
+</html>
